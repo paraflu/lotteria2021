@@ -1,18 +1,12 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:lotteria2021/store/actions.dart';
 import 'package:lotteria2021/store/reducer.dart';
-import 'package:lotteria2021/themecolor.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_thunk/redux_thunk.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'page/home.dart';
 import 'page/insertcore.dart';
 import 'store/appstate.dart';
-import 'store/storemiddleware.dart';
 
 void main() => runApp(LotteriaScontrini());
 

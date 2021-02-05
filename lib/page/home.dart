@@ -13,10 +13,10 @@ class Home extends StatelessWidget {
   const Home({Key key}) : super(key: key);
 
   void action(Store<String> store) async {
-    log("action async");
+    debugPrint("action async");
     SharedPreferences.getInstance().then((pref) {
       try {
-        log("ci sono");
+        debugPrint("ci sono");
         return new SetCode(pref.getString("code"));
       } catch (e) {
         return new LoadingComplete();
