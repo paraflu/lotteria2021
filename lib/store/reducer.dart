@@ -8,5 +8,11 @@ AppState appStateReducer(AppState prevState, dynamic action) {
   if (action is SetCode) {
     newState.code = action.payload;
   }
+  if (action is StartLoad) {
+    newState.loading = true;
+  }
+  if (action is LoadingComplete) {
+    newState.loading = false;
+  }
   return newState;
 }

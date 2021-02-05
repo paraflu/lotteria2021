@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:lotteria2021/store/actions.dart';
+import 'package:lotteria2021/themecolor.dart';
 import '../store/appstate.dart';
 
 class InsertCode extends StatelessWidget {
@@ -12,10 +13,9 @@ class InsertCode extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.teal,
+          backgroundColor: themeLotteria,
           title: Text("LotteriaDegliScontriniInsertCode"),
         ),
-        // drawer: DrawerMenu(),
         body: StoreConnector<AppState, AppState>(
             converter: (store) => store.state,
             builder: (context, state) {
