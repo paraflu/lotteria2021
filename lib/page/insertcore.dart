@@ -14,7 +14,7 @@ class InsertCode extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: themeLotteria,
-          title: Text("LotteriaDegliScontriniInsertCode"),
+          title: Text("Lotteria degli scontrini 🇮🇹"),
         ),
         body: StoreConnector<AppState, AppState>(
             converter: (store) => store.state,
@@ -26,14 +26,14 @@ class InsertCode extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("InsertCode"),
+                        Text("Inserisci il codice"),
                         TextFormField(
                           initialValue: state.code,
-                          decoration:
-                              const InputDecoration(hintText: "InsertCodeHere"),
+                          decoration: const InputDecoration(
+                              hintText: "Inserisci il codice lotteria"),
                           validator: (value) {
                             if (value.isEmpty || value.length != 8) {
-                              return "InsertCodeMinLength8";
+                              return "Il codice deve essere lungo 8 caratteri";
                             }
                             return null;
                           },
@@ -50,10 +50,10 @@ class InsertCode extends StatelessWidget {
                               // the form is invalid.
                               if (_formKey.currentState.validate()) {
                                 _formKey.currentState.save();
-                                Navigator.pushNamed(context, '/');
+                                Navigator.pop(context);
                               }
                             },
-                            child: Text('Submit'),
+                            child: Text('Salva'),
                           ),
                         ),
                       ],
