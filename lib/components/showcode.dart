@@ -21,11 +21,16 @@ class ShowCode extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
             child: BarcodeWidget(
               barcode: Barcode.code128(),
-              height: 150,
+              height: 120,
               data: code,
               drawText: false,
             ),
           ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Text(
+              "Mostra questo codice all'esercente prima di effettuare un pagamento. Partecipi solo se il tuo acquisto ha un importo maggiore o uguale a 1 euro."),
         ),
         Container(
           decoration: BoxDecoration(color: Colors.black),
