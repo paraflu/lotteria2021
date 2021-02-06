@@ -8,8 +8,9 @@ class Code extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = TextStyle(
-      fontSize: 30,
+      fontSize: 25,
       fontWeight: FontWeight.w400,
+      color: Colors.white,
       backgroundColor: themeLotteria,
     );
 
