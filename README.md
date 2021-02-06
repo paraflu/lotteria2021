@@ -1,16 +1,6 @@
-# lotteria2021
+# Lotteria degli scontrini 2021
 
-A new Flutter project.
+Piccola app per memorizzare il codice della lotteria e visualizzarlo all'atto del pagamento.
 
-## Getting Started
+I dati vengono archiviati in locale nelle sharedpref.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
