@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:lotteria2021/themecolor.dart';
 
 class Code extends StatelessWidget {
@@ -7,6 +8,10 @@ class Code extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     final style = TextStyle(
       fontSize: 25,
       fontWeight: FontWeight.w400,
@@ -21,9 +26,9 @@ class Code extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
             child: Container(
+              width: 25,
               decoration: BoxDecoration(color: themeLotteria),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+              child: Center(
                 child: Text(
                   element,
                   style: style,
