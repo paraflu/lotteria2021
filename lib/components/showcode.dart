@@ -12,7 +12,7 @@ class ShowCode extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.blueGrey),
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(20.0),
       ),
       child: Column(children: [
         Padding(
@@ -29,8 +29,12 @@ class ShowCode extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(
-              "Mostra questo codice all'esercente prima di effettuare un pagamento. Partecipi solo se il tuo acquisto ha un importo maggiore o uguale a 1 euro."),
+          child: Center(
+            child: Text(
+              "Mostra questo codice all'esercente prima di effettuare un pagamento. Partecipi solo se il tuo acquisto ha un importo maggiore o uguale a 1 euro.",
+              textAlign: TextAlign.center,
+            ),
+          ),
         ),
         Container(
           decoration: BoxDecoration(color: Colors.black),

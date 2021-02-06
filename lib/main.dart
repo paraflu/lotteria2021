@@ -30,7 +30,7 @@ class _LotteriaScontriniState extends State<LotteriaScontrini> {
         store: store,
         child: MaterialApp(
           initialRoute: '/',
-          // theme: myTheme,
+          theme: ThemeData.light(),
           routes: {'/': (context) => Home(), '/set': (context) => InsertCode()},
         ));
   }
