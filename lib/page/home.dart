@@ -42,9 +42,12 @@ class _HomeState extends State<Home> {
           store.dispatch(StartLoad((_code) {
             setState(() {
               code = _code;
-              store.dispatch(SetCode(_code));
             });
-            store.dispatch(LoadingComplete());
+            if (_code != null && _code.isNotEmpty) {
+              store.dispatch(SetCode(_code));
+            } else {
+              store.dispatch(LoadingComplete());
+            }
           }));
         },
         converter: (store) => store.state,

@@ -7,7 +7,7 @@ AppState appStateReducer(AppState prevState, dynamic action) {
   AppState newState = AppState.fromAppState(prevState);
 
   if (action is SetCode) {
-    newState.code = action.payload.toUpperCase();
+    newState.code = action.payload?.toUpperCase();
     newState.loading = false;
     SharedPreferences.getInstance()
         .then((value) => value.setString('code', newState.code));
