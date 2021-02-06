@@ -74,14 +74,11 @@ class _HomeState extends State<Home> {
                     child: Image(image: AssetImage('assets/logo.png')),
                   ),
                 ),
-                // Padding(
-                //   padding: EdgeInsets.only(left: 20, top: 20),
-                // ),
                 state.loading
                     ? Center(child: CircularProgressIndicator())
                     : state.code.isNotEmpty
                         ? ShowCode(code: state.code)
-                        : RaisedButton(
+                        : ElevatedButton(
                             child: Row(children: [
                               Icon(Icons.settings),
                               Text('Inserisci il codice')
